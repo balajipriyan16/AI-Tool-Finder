@@ -32,6 +32,7 @@ Users can browse AI tools, view detailed information about each tool, and receiv
 * Rajaguru
 * Sivakumar
 * Bhaveas Prajjit
+* Naresh
 
 ---
 
