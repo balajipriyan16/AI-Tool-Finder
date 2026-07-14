@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <script src="data.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <img id="tool-image" src="" alt="Tool Logo" width="100">
+
+        <h1 id="tool-name"></h1>
+
+        <h3 id="tool-company"></h3>
+
+        <span id="tool-category"></span>
+
+        <p id="tool-pricing"></p>
+
+        <p id="tool-description"></p>
+
+        <h3>Features</h3>
+        <ul id="tool-features"></ul>
+
+        <a id="tool-website" href="#" target="_blank">
+            Visit Website
+        </a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get("slug");
+
+        const tool = aiTools.find(item => item.slug === slug);
+
+        if (tool) {
+            // Page title
+            document.title = tool.name;
+
+            // Fill content
+            document.getElementById("tool-image").src = tool.image;
+            document.getElementById("tool-image").alt = tool.name;
+
+            document.getElementById("tool-name").textContent = tool.name;
+            document.getElementById("tool-company").textContent = tool.company;
+            document.getElementById("tool-category").textContent = tool.category;
+            document.getElementById("tool-pricing").textContent = tool.pricing;
+            document.getElementById("tool-description").textContent = tool.description;
+
+            document.getElementById("tool-website").href = tool.website;
+
+            // Features
+            const featureList = document.getElementById("tool-features");
+
+            tool.features.forEach(feature => {
+                const li = document.createElement("li");
+                li.textContent = feature;
+                featureList.appendChild(li);
+            });
+
+        } else {
+            document.body.innerHTML = `
+                <h1>404</h1>
+                <p>AI Tool not found.</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
