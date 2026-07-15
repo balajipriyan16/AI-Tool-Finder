@@ -250,24 +250,6 @@ hr{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer{
     background-color:#090215;
     color:#e8ecef;
@@ -332,9 +314,15 @@ hr{
 }
 
 
+
+
 @media (max-width:610px){
     .Ai-Card{
         width:100%;
+    }
+
+    .categories{
+        justify-content: center;
     }
 
 }
