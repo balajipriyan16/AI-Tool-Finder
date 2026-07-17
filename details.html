@@ -31,6 +31,185 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="data.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <section id="home" class="header">
+
+        <div class="header-left">
+            <h1>
+                FindMy<span class="AI-CLASS">AI</span>
+            </h1>
+        </div>
+
+        <div class="hidden md:flex gap-5 justify-center items-center">
+
+            <a class="hover:underline hover:text-red-500" href="index.html">
+                Home
+            </a>
+
+            <a class="hover:underline hover:text-red-500" href="index.html#search">
+                Tools
+            </a>
+
+            <a class="hover:underline hover:text-red-500" href="#footer">
+                About
+            </a>
+
+            <a href="./Login/login.html">
+                <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
+                    <i class="fa-solid fa-user text-white"></i>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- DETAILS -->
+
+    <div class="container details-container">
+
+        <div class="details-card">
+
+            <div class="details-top">
+
+                <img id="tool-image" src="" alt="">
+
+                <div class="details-info">
+
+                    <h1 id="tool-name"></h1>
+
+                    <h3 id="tool-company"></h3>
+
+                    <div class="details-badges">
+
+                        <span
+                            id="tool-category"
+                            class="details-category">
+                        </span>
+
+                        <span
+                            id="tool-pricing"
+                            class="details-pricing">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="details-section">
+
+                <h2>Description</h2>
+
+                <p
+                    id="tool-description"
+                    class="details-description">
+                </p>
+
+            </div>
+
+            <div class="details-section">
+
+                <h2>Features</h2>
+
+                <ul
+                    id="tool-features"
+                    class="features-grid">
+                </ul>
+
+            </div>
+
+            <div class="action-buttons">
+
+                <a
+                    href="index.html"
+                    class="back-btn">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+
+                </a>
+
+                <a
+                    id="tool-website"
+                    class="visit-btn"
+                    target="_blank">
+
+                    <i class="fa-solid fa-globe"></i>
+                    Visit Website
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>FindMyAI</h2>
+                <p>
+                    Discover the perfect AI tool for every task.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="index.html#search">
+                    Tools
+                </a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>
+                    Email: support@findmyai.com
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 FindMyAI. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
         const slug = params.get("slug");
 
         const tool = aiTools.find(item => item.slug === slug);
@@ -40,6 +219,9 @@
             document.title = tool.name;
 
             // Fill content
+
+            document.title = tool.name + " | FindMyAI";
+
             document.getElementById("tool-image").src = tool.image;
             document.getElementById("tool-image").alt = tool.name;
 
@@ -66,6 +248,46 @@
                 <p>AI Tool not found.</p>
             `;
         }
+            const featureList =
+                document.getElementById("tool-features");
+
+            tool.features.forEach(feature => {
+
+                const li =
+                    document.createElement("li");
+
+                li.textContent = "✓ " + feature;
+
+                featureList.appendChild(li);
+
+            });
+
+        }
+
+        else {
+
+            document.querySelector(".details-card").innerHTML = `
+
+                <h1 style="font-size:3rem;color:#ff435e;">
+                    404
+                </h1>
+
+                <p>
+                    AI Tool not found.
+                </p>
+
+                <a
+                    href="index.html"
+                    class="visit-btn">
+
+                    Go Home
+
+                </a>
+
+            `;
+
+        }
+
     </script>
 
 </body>
