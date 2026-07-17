@@ -1,3 +1,15 @@
+var MenuBtn = document.getElementById("MenuBtn");
+var SideNavbar = document.querySelector(".SideNavbar");
+var closebtn = document.getElementById("closebtn")
+
+MenuBtn.addEventListener("click", () => {
+    SideNavbar.classList.toggle("show");
+});
+
+closebtn.addEventListener("click", () => {
+    SideNavbar.classList.toggle("show");
+});
+
 document.getElementById("contactform").addEventListener("submit",function(e){
     e.preventDefault();
     let name=document.getElementById("name").value.trim();
