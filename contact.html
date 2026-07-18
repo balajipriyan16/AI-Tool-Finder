@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
+
 </head>
 <body>
     <section id="home" class="header">
@@ -13,12 +15,42 @@
             <h1>FindMy<span class="AI-CLASS">AI</span></h1>
         </div>
 
+        <div id="MenuBtn" class="menu block md:hidden cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <div class="hidden md:flex gap-5 justify-center items-center">
-            <a class="hover:underline hover:text-red-500" href="index.html">Home</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html">Home</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html#search">Tools</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html#footer">About</a>
+            <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
             <a href="./Login/login.html">
+                <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
+                    <i class="fa-solid fa-user text-white"></i>
+                </div>
             </a>
         </div>
     </section>
+
+    <div class="SideNavbar">
+        <div class="sideNavItemsdiv">
+            <div class="sideNavItems">
+                <a class="hover:underline hover:text-red-500" href="./index.html">Home</a>
+                <a class="hover:underline hover:text-red-500" href="./index.html#search">Tools</a>
+                <a class="hover:underline hover:text-red-500" href="./index.html#footer">About</a>
+                <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
+                <a href="./Login/login.html">
+                    <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
+                        <i class="fa-solid fa-user text-white"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cursor-pointer close" id="closebtn">
+                X
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="left">
@@ -39,7 +71,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
                     Email</h3>
-                <p>support@aitools.com</p>
+                <p>support@findmyai.com</p>
             </div>
             <div class="info">
                 

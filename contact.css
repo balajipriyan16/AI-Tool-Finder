@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
 }
 body{
     background-color: #090215;
@@ -52,12 +51,6 @@ body{
     align-items: center;
 
 }
-a{
-    color: white;
-    font: bold;
-    text-decoration: none;
-}
-
 
 .Title-Heading{
     text-align: center;
@@ -194,4 +187,23 @@ button{
 }
 button:hover{
     background: #1d4e;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder{
+    color: #777;
+}
+
+.input-box input,
+.input-box textarea{
+    color: black;
+}
+
+
+
+@media (max-width:765px){
+    .header{
+        padding: 20px 20px 20px 20px;
+    }
+
 }
