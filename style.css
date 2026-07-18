@@ -72,7 +72,7 @@ body{
 
 .AI-GRAD{
     font-weight: bold;
-    animation: neonColor 10s linear infinite;
+    animation: neonColor 5s linear infinite;
 }
 
 @keyframes neonColor{
@@ -84,7 +84,7 @@ body{
             0 0 18px rgba(255,91,115,.35);
     }
 
-    20%{
+    50%{
         color:#e8ecef;
         text-shadow:
             0 0 4px rgba(232,236,239,.95),
@@ -92,29 +92,6 @@ body{
             0 0 18px rgba(232,236,239,.30);
     }
 
-    40%{
-        color:#00F5FF;
-        text-shadow:
-            0 0 4px rgba(0,245,255,.95),
-            0 0 10px rgba(0,245,255,.70),
-            0 0 18px rgba(0,245,255,.35);
-    }
-
-    60%{
-        color:#7B2CFF;
-        text-shadow:
-            0 0 4px rgba(123,44,255,.95),
-            0 0 10px rgba(123,44,255,.70),
-            0 0 18px rgba(123,44,255,.35);
-    }
-
-    80%{
-        color:#00FF9D;
-        text-shadow:
-            0 0 4px rgba(0,255,157,.95),
-            0 0 10px rgba(0,255,157,.70),
-            0 0 18px rgba(0,255,157,.35);
-    }
 
     100%{
         color:#ff5b73;
@@ -340,6 +317,12 @@ hr{
     font-size: 18px; 
     font-weight: 900;
 }
+
+
+
+
+
+
 
 
 

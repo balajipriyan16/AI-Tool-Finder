@@ -245,3 +245,30 @@ input {
 .social-container a:active {
 	transform: translateY(0) scale(1);
 }
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: #090215;
+    padding: 20px 100px 20px 100px;
+    border-bottom: 1px solid #9aa5b173;
+}
+
+.header-left h1{
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.header-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}

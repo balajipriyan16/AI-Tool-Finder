@@ -21,6 +21,6 @@ document.getElementById("contactform").addEventListener("submit",function(e){
     return;
  }
  alert("Message Sent Succesfully");
- this.requestFullscreen();
+ window.location.href="index.html";
     
 })

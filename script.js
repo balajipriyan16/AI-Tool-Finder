@@ -18,7 +18,7 @@ var categoriesContainer = document.querySelector(".categories");
 categories.forEach((i) => {
     var categoriesbtn = document.createElement("div");
     categoriesbtn.innerHTML = `
-    <button>${i}</button>
+    <button title="${i}">${i}</button>
     `;
     categoriesContainer.append(categoriesbtn);
 });
@@ -58,7 +58,7 @@ function displayCards(toolList) {
                 <p>By ${j.company}</p>
             </div>
         </div>
-        <button onclick="window.location.href='details.html?slug=${j.slug}'">
+        <button title="View Details of ${j.name}" onclick="window.location.href='details.html?slug=${j.slug}'">
             View Details
         </button>
         `;
