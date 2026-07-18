@@ -1,8 +1,8 @@
-# AI Tool Recommendation System
+# FindMyAI - An AI Tool Recommendation Website
 
 ## 📌 Project Overview
 
-The **AI Tool Recommendation System** is a frontend web application developed using **HTML, CSS, and JavaScript**. The application helps users discover suitable AI tools based on their needs and preferences.
+The **FindMyAI** is a frontend web application developed using **HTML, CSS, and JavaScript**. The application helps users discover suitable AI tools based on their needs and preferences.
 
 Users can browse AI tools, view detailed information about each tool, and receive recommendations through an interactive interface.
 
@@ -13,7 +13,6 @@ Users can browse AI tools, view detailed information about each tool, and receiv
 * Browse a collection of popular AI tools
 * Search and filter AI tools
 * View detailed information about each AI tool
-* AI tool recommendation based on user preferences
 * Responsive and user-friendly interface
 
 ---
@@ -23,16 +22,17 @@ Users can browse AI tools, view detailed information about each tool, and receiv
 * HTML
 * CSS
 * JavaScript
+* Tailwind CSS
 
 ---
 
 ## 👥 Team Members
 
-* Balaaji Priyan
-* Rajaguru
-* Sivakumar
-* Bhaveas Prajjit
-* Naresh
+- Balaaji Priyan (@balajipriyan16)
+- Rajaguru (@rajaguru2506)
+- Sivakumar (@aharisivakumar)
+- Bhaveas Prajjit (@prajjit)
+- Naresh (@Nareshethiraj)
 
 ---
 
