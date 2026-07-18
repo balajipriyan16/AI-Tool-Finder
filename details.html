@@ -1,72 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
+
+    <title>Loading... | FindMyAI</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Data -->
     <script src="data.js"></script>
 </head>
+
 <body>
 
-    <div class="container">
-        <img id="tool-image" src="" alt="Tool Logo" width="100">
+    <!-- HEADER -->
 
-        <h1 id="tool-name"></h1>
+    <section id="home" class="header">
+        <div class="header-left">
+            <h1>FindMy<span class="AI-CLASS">AI</span></h1>
+        </div>
 
-        <h3 id="tool-company"></h3>
+        <div id="MenuBtn" class="menu block md:hidden cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-        <span id="tool-category"></span>
+        <div class="hidden md:flex gap-5 justify-center items-center">
+            <a class="hover:underline hover:text-red-500" href="#HEADING">Home</a>
+            <a class="hover:underline hover:text-red-500" href="#search">Tools</a>
+            <a class="hover:underline hover:text-red-500" href="#footer">About</a>
+            <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
+            <a href="./Login/login.html">
+                <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
+                    <i class="fa-solid fa-user text-white"></i>
+                </div>
+            </a>
+        </div>
+    </section>
 
-        <p id="tool-pricing"></p>
+    <!-- SideNavbar -->
+    <div class="SideNavbar">
+        <div class="sideNavItemsdiv">
+            <div class="sideNavItems">
+                <a class="hover:underline hover:text-red-500" href="#HEADING">Home</a>
+                <a class="hover:underline hover:text-red-500" href="#search">Tools</a>
+                <a class="hover:underline hover:text-red-500" href="#footer">About</a>
+                <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
+                <a href="./Login/login.html">
+                    <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
+                        <i class="fa-solid fa-user text-white"></i>
+                    </div>
+                </a>
+            </div>
 
-        <p id="tool-description"></p>
-
-        <h3>Features</h3>
-        <ul id="tool-features"></ul>
-
-        <a id="tool-website" href="#" target="_blank">
-            Visit Website
-        </a>
+            <div class="cursor-pointer close" id="closebtn">
+                X
+            </div>
+        </div>
     </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const slug = params.get("slug");
 
-        const tool = aiTools.find(item => item.slug === slug);
+    <!-- DETAILS -->
+    <div class="container details-container">
+        <div class="details-card">
+            <div class="details-top">
+
+                <img id="tool-image" src="" alt="Tool Logo">
+
+                <div class="details-info">
+
+                    <h1 id="tool-name"></h1>
+
+                    <h3 id="tool-company"></h3>
+
+                    <div class="details-badges">
+
+                        <span id="tool-category" class="details-category">
+                        </span>
+
+                        <span id="tool-pricing" class="details-pricing">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="details-section">
+
+                <h2>Description</h2>
+
+                <p id="tool-description" class="details-description">
+                </p>
+
+            </div>
+
+
+            <!-- FEATURES -->
+
+            <div class="details-section">
+
+                <h2>Features</h2>
+
+                <ul id="tool-features" class="features-grid">
+                </ul>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="action-buttons">
+
+                <a href="index.html" class="back-btn">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back
+
+                </a>
+
+
+                <a id="tool-website" class="visit-btn" target="_blank">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    Visit Website
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>FindMyAI</h2>
+                <p>Discover the perfect AI tool for every task.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="./index.html#home">Home</a>
+                <a href="./index.html#search">Tools</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: support@findmyai.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 FindMyAI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        var MenuBtn = document.getElementById("MenuBtn");
+        var SideNavbar = document.querySelector(".SideNavbar");
+        var closebtn = document.getElementById("closebtn");
+
+        MenuBtn.addEventListener("click", () => {
+            SideNavbar.classList.toggle("show");
+        });
+
+        closebtn.addEventListener("click", () => {
+            SideNavbar.classList.toggle("show");
+        });
+
+        // Get slug from URL
+        // Example:
+        // details.html?slug=chatgpt
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const slug =
+            params.get("slug");
+
+
+        // Find the tool
+        const tool =
+            aiTools.find(item => item.slug === slug);
+
 
         if (tool) {
+
             // Page title
-            document.title = tool.name;
+            document.title =
+                tool.name + " | FindMyAI";
 
-            // Fill content
-            document.getElementById("tool-image").src = tool.image;
-            document.getElementById("tool-image").alt = tool.name;
 
-            document.getElementById("tool-name").textContent = tool.name;
-            document.getElementById("tool-company").textContent = tool.company;
-            document.getElementById("tool-category").textContent = tool.category;
-            document.getElementById("tool-pricing").textContent = tool.pricing;
-            document.getElementById("tool-description").textContent = tool.description;
+            // Image
+            document.getElementById("tool-image").src =
+                tool.image;
 
-            document.getElementById("tool-website").href = tool.website;
+            document.getElementById("tool-image").alt =
+                tool.name;
+
+
+            // Basic information
+            document.getElementById("tool-name").textContent =
+                tool.name;
+
+            document.getElementById("tool-company").textContent =
+                tool.company;
+
+            document.getElementById("tool-category").textContent =
+                tool.category;
+
+            document.getElementById("tool-pricing").textContent =
+                tool.pricing;
+
+            document.getElementById("tool-description").textContent =
+                tool.description;
+
+
+            // Website
+            document.getElementById("tool-website").href =
+                tool.website;
+
 
             // Features
-            const featureList = document.getElementById("tool-features");
+            const featureList =
+                document.getElementById("tool-features");
+
 
             tool.features.forEach(feature => {
-                const li = document.createElement("li");
-                li.textContent = feature;
+
+                const li =
+                    document.createElement("li");
+
+                li.textContent =
+                    "✓ " + feature;
+
                 featureList.appendChild(li);
+
             });
 
+
         } else {
-            document.body.innerHTML = `
-                <h1>404</h1>
-                <p>AI Tool not found.</p>
+
+            document.querySelector(".details-card").innerHTML = `
+
+                <h1 style="font-size:3rem;color:#ff435e;">
+                    404
+                </h1>
+
+                <p>
+                    AI Tool not found.
+                </p>
+
+                <a href="index.html"
+                    class="visit-btn">
+
+                    Go Home
+
+                </a>
+
             `;
+
         }
+
     </script>
 
 </body>
+
 </html>

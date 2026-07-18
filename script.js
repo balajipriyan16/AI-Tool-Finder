@@ -68,8 +68,8 @@ function displayCards(toolList) {
         <div class="pricing">
             <span>${j.pricing}</span>
         </div>
-
-        <button onclick="window.open('details.html?slug=${j.slug}','_blank')">
+        
+        <button onclick="window.location.href='details.html?slug=${j.slug}'">
             View Details
         </button>
         `;
