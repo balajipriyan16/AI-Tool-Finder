@@ -28,11 +28,11 @@ Users can browse AI tools, view detailed information about each tool, and receiv
 
 ## 👥 Team Members
 
-- Balaaji Priyan (@balajipriyan16)
-- Rajaguru (@rajaguru2506)
-- Sivakumar (@aharisivakumar)
-- Bhaveas Prajjit (@prajjit)
-- Naresh (@Nareshethiraj)
+- Balaaji Priyan — [@balajipriyan16](https://github.com/balajipriyan16)
+- Rajaguru — [@rajaguru2506](https://github.com/rajaguru2506)
+- Sivakumar — [@aharisivakumar](https://github.com/aharisivakumar)
+- Bhaveas Prajjit — [@prajjit](https://github.com/prajjit)
+- Naresh — [@Nareshethiraj](https://github.com/Nareshethiraj)
 
 ---
 
