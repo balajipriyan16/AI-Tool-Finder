@@ -6,7 +6,9 @@
     font-family:sans-serif;
 }
 body{
-    background: #090215;
+    background-color: #090215;
+    color: #e8ecef;
+    font-family: "Poppins";
 }
 .container{
     width: 90%;
@@ -111,7 +113,7 @@ a{
 
 .left{
     padding: 50px;
-    background:#8B0000;
+    background:#25233b;
     color: #fff;
 }
 .left h1{
