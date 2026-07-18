@@ -32,6 +32,17 @@ function displayCards(toolList) {
 
     DispCards.innerHTML = "";
 
+    if (toolList.length === 0) {
+        const emptyState = document.createElement("div");
+        emptyState.className = "empty-state";
+        emptyState.innerHTML = `
+            <h3>No tools found</h3>
+            <p>Try a different keyword or category.</p>
+        `;
+        DispCards.appendChild(emptyState);
+        return;
+    }
+
     toolList.forEach((j) => {
 
         var AICard = document.createElement("div");

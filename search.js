@@ -3,18 +3,28 @@ const categoryContainer = document.querySelector(".categories");
 
 let selectedCategory = "All";
 
+if (categoryContainer) {
+    const firstButton = categoryContainer.querySelector("button");
+    if (firstButton) {
+        firstButton.classList.add("active");
+    }
+}
 
 searchInput.addEventListener("input", filterTools);
 
-
 categoryContainer.addEventListener("click", (e) => {
+    const clickedButton = e.target.closest("button");
 
-    if (e.target.tagName !== "BUTTON") return;
+    if (!clickedButton) return;
 
-    selectedCategory = e.target.innerText;
+    categoryContainer.querySelectorAll("button").forEach((button) => {
+        button.classList.remove("active");
+    });
+
+    clickedButton.classList.add("active");
+    selectedCategory = clickedButton.innerText;
 
     filterTools();
-
 });
 
 function filterTools() {
@@ -23,9 +33,7 @@ function filterTools() {
 
     const filtered = aiTools.filter(tool => {
 
-        const searchMatch =
-
-            tool.name.toLowerCase().includes(keyword)
+        const searchMatch = tool.name.toLowerCase().includes(keyword) || tool.category.toLowerCase().includes(keyword);
 
         const categoryMatch =
 
