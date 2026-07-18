@@ -10,6 +10,8 @@ if (categoryContainer) {
     }
 }
 
+var searchHeading = document.getElementById("searchHeading");
+
 searchInput.addEventListener("input", filterTools);
 
 categoryContainer.addEventListener("click", (e) => {
@@ -28,6 +30,11 @@ categoryContainer.addEventListener("click", (e) => {
 });
 
 function filterTools() {
+    if (searchInput.value) {
+        searchHeading.innerHTML = `Search Results for <strong>"${searchInput.value}"</strong>`;
+    } else {
+        searchHeading.innerHTML = `All Tools`;
+    }
 
     const keyword = searchInput.value.toLowerCase();
 

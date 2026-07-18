@@ -21,9 +21,6 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
-
     <section id="home" class="header">
         <div class="header-left">
             <h1>FindMy<span class="AI-CLASS">AI</span></h1>
@@ -34,9 +31,9 @@
         </div>
 
         <div class="hidden md:flex gap-5 justify-center items-center">
-            <a class="hover:underline hover:text-red-500" href="#HEADING">Home</a>
-            <a class="hover:underline hover:text-red-500" href="#search">Tools</a>
-            <a class="hover:underline hover:text-red-500" href="#footer">About</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html">Home</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html#search">Tools</a>
+            <a class="hover:underline hover:text-red-500" href="./index.html#footer">About</a>
             <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
             <a href="./Login/login.html">
                 <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
@@ -46,13 +43,12 @@
         </div>
     </section>
 
-    <!-- SideNavbar -->
     <div class="SideNavbar">
         <div class="sideNavItemsdiv">
             <div class="sideNavItems">
-                <a class="hover:underline hover:text-red-500" href="#HEADING">Home</a>
-                <a class="hover:underline hover:text-red-500" href="#search">Tools</a>
-                <a class="hover:underline hover:text-red-500" href="#footer">About</a>
+                <a class="hover:underline hover:text-red-500" href="./index.html">Home</a>
+                <a class="hover:underline hover:text-red-500" href="./index.html#search">Tools</a>
+                <a class="hover:underline hover:text-red-500" href="./index.html#footer">About</a>
                 <a class="hover:underline hover:text-red-500" href="contact.html">Contact</a>
                 <a href="./Login/login.html">
                     <div class="bg-[#ff435e] w-10 h-10 flex justify-center items-center rounded-full cursor-pointer">
@@ -196,16 +192,13 @@
         // Example:
         // details.html?slug=chatgpt
 
-        const params =
-            new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
 
-        const slug =
-            params.get("slug");
+        const slug = params.get("slug");
 
 
         // Find the tool
-        const tool =
-            aiTools.find(item => item.slug === slug);
+        const tool = aiTools.find(item => item.slug === slug);
 
 
         if (tool) {

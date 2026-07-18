@@ -55,20 +55,9 @@ function displayCards(toolList) {
 
             <div class="card-title">
                 <h2>${j.name}</h2>
-                <p>${j.company}</p>
+                <p>By ${j.company}</p>
             </div>
         </div>
-
-        <span class="category">${j.category}</span>
-
-        <p class="description">
-            ${j.description}
-        </p>
-
-        <div class="pricing">
-            <span>${j.pricing}</span>
-        </div>
-        
         <button onclick="window.location.href='details.html?slug=${j.slug}'">
             View Details
         </button>
@@ -82,3 +71,4 @@ function displayCards(toolList) {
 
 // Show all cards initially
 displayCards(aiTools);
+

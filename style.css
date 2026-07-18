@@ -70,6 +70,64 @@ body{
 
 
 
+.AI-GRAD{
+    font-weight: bold;
+    animation: neonColor 10s linear infinite;
+}
+
+@keyframes neonColor{
+    0%{
+        color:#ff5b73;
+        text-shadow:
+            0 0 4px rgba(255,91,115,.95),
+            0 0 10px rgba(255,91,115,.70),
+            0 0 18px rgba(255,91,115,.35);
+    }
+
+    20%{
+        color:#e8ecef;
+        text-shadow:
+            0 0 4px rgba(232,236,239,.95),
+            0 0 10px rgba(232,236,239,.65),
+            0 0 18px rgba(232,236,239,.30);
+    }
+
+    40%{
+        color:#00F5FF;
+        text-shadow:
+            0 0 4px rgba(0,245,255,.95),
+            0 0 10px rgba(0,245,255,.70),
+            0 0 18px rgba(0,245,255,.35);
+    }
+
+    60%{
+        color:#7B2CFF;
+        text-shadow:
+            0 0 4px rgba(123,44,255,.95),
+            0 0 10px rgba(123,44,255,.70),
+            0 0 18px rgba(123,44,255,.35);
+    }
+
+    80%{
+        color:#00FF9D;
+        text-shadow:
+            0 0 4px rgba(0,255,157,.95),
+            0 0 10px rgba(0,255,157,.70),
+            0 0 18px rgba(0,255,157,.35);
+    }
+
+    100%{
+        color:#ff5b73;
+        text-shadow:
+            0 0 4px rgba(255,91,115,.95),
+            0 0 10px rgba(255,91,115,.70),
+            0 0 18px rgba(255,91,115,.35);
+    }
+}
+
+
+
+
 .INPUT input{
     border: 2px solid red;
     padding: 15px;
@@ -250,11 +308,11 @@ hr{
     border-bottom: 1px solid red;
     position: fixed;
     top: 0;
-    left: -50%; 
+    left: -150%; 
     z-index: 200;
     width: 50%;
     height: 100%;
-    transition: left 0.5s ease-in-out;
+    transition: left 0.35s ease-in-out;
 }
 
 .SideNavbar.show {
@@ -375,7 +433,7 @@ hr{
 
 
 /* ===========================
-   DETAILS PAGE
+   DETAILS PAGE - By Rajaguru
 =========================== */
 
 .details-container{
